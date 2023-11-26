@@ -1,0 +1,42 @@
+<!-- Only add variable parts -->
+<link rel="stylesheet" href="<%= assetPath('css/home.css') %>" >
+
+<div class="flex home-box">
+    <div class="flex home-heading">        
+        <h1>List of Students:</h1>
+        <a href="/students/create" class="add-student-btn">+ Add Student</a>
+    </div>
+
+
+    <table>
+        <tr class="thead">
+          <th>Batch</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>DSA</th>
+          <th>Web</th>
+          <th>React</th>
+          <th>Interview</th>
+          <th>Action</th>
+        </tr>
+          
+        <% students.forEach(student => { %>
+        <tr class="tbody">
+          <td><%= student.batch %></td>
+          <td><%= student.name %></td>
+          <td><%= student.email %></td>
+          <td><%= student.contactNumber %></td>
+          <td><%= student.dsa %></td>
+          <td><%= student.webd %></td>
+          <td><%= student.react %></td>
+          <td>
+            <% student.interviews.forEach(i => { %>
+              <span><%= i.company %> ,</span>
+              <% }); %>
+          </td>
+          <td><a href="/students/delete/<%= student._id %>" class="red-btn delete-btn">Delete</a></td>
+        </tr>
+        <% }); %>
+    </table>     
+</div>

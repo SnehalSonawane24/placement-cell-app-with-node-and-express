@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="<%= assetPath('css/_header.css') %>" >
+
+<header class="flex">
+    <h1><a href="/">Placement Cell</a></h1>
+
+    <% if(locals.user){ %>
+        <h2><a href="/users/profile">Welcome <%= user.name %></a></h2>
+    <% } %>
+
+    <ul class="flex">
+        <% if(locals.user){ %> 
+            <li>
+                <a href="/company/home">Company List</a>
+            </li>
+            <li>
+                <a href="/users/download-csv">Download Report</a>
+            </li>
+            <li class="red-btn">
+                <a href="/users/sign-out">Sign Out</a>
+            </li>
+        <% }else{ %>
+            <li>
+                <a href="/users/sign-in">Sign In</a>
+            </li>
+            <li>
+                <a href="/users/sign-up">Sign-Up</a>
+            </li>
+        <% } %>
+    </ul>
+</header>

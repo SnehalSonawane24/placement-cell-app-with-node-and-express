@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="<%= assetPath('css/company-Home.css') %>" >
+
+<div class="company-home-box flex">
+    <div class="company-home-heading flex">
+        <h1>Interview</h1>
+        <form action="/company/allocate" method="GET">
+            <button type="submit" class="allocate-student-btn">Allocate Interview</button>
+        </form>
+    </div>
+
+    <table>
+        <tr class="thead">
+            <th>Company</th>
+            <th>Student</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Batch</th>
+            <th>Interview Date</th>
+            <th>Result</th>
+        </tr>
+        <% for (const student of students) { %>
+            <% for(const i of student.interviews ){ %>
+            <tr class="tbody">
+                <td style="font-weight: bold;"><%= i.company %></td>
+                <td><%= student.name %></td>
+                <td><%= student.email %></td>
+                <td><%= student.contactNumber %></td>
+                <td><%= student.batch %></td>
+                <td><%= i.date %></td>
+                <td>
+                    <form action="/company/update-status/<%= student._id %>" method="POST">
+                        <input type="hidden" name="companyName" value="<%= i.company %>">
+                        <select id="companyResult" name="companyResult">
+                            <option value="<%= i.result %>"><%= i.result %></option>
+                            <option value="On Hold">On Hold</option>
+                            <option value="Selected">Selected</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Not Selected">Not Selected</option>
+                            <option value="Did not Attempt">Did not Attempt</option>
+                        </select>
+                        <button type="submit">Update Status</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        <% } %>
+        
+    </table>
+    
+</div>
+

@@ -1,0 +1,68 @@
+.company-home-box{
+    justify-content: unset;
+    flex-direction: column;
+    height: 80vh;
+    /* border: 2px solid red; */
+}
+
+.company-home-heading{
+    width: 75%;
+    /* border: 2px solid green; */
+    position: relative;
+    padding: 2rem 0;
+}
+
+.company-home-heading h1{
+    color: rgb(19 4 63);
+  }
+.allocate-student-btn{
+    background-color: #199328;
+    border-radius: .3rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem;
+    color: white;
+}
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.thead{
+    background-color: rgb(38 36 73);
+    color: white;
+}
+.tbody select, .tbody option{
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    padding: .5rem;
+}
+.tbody button{
+    background-color: gold;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    margin-left: .2rem;
+    padding: .5rem;
+    font-weight: bold;
+}
+.tbody:nth-child(odd){
+    background-color: rgb(182, 179, 179);
+}
+.tbody:nth-child(even){
+    background-color: rgb(249, 240, 240);
+}
+
+td{
+    padding: 1rem 0;
+}
+

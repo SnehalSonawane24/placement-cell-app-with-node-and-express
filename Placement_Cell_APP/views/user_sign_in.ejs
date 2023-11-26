@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="<%= assetPath('css/user_sign_in-out.css') %>" >
+
+<div class="box flex">
+    <div class="form-box flex ">
+        <form action="/users/create-Session" method="POST" class="flex">
+
+            <h2> Sign In </h2>
+
+            <div class="form-input flex">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+            </div>
+            
+            <div class="form-input flex">
+                <label for="password">Your Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required />
+            </div>
+
+            <input style="text-align: center;" type="submit" value="Sign In" class="btn">
+        </form>
+
+        <p>No Account? <a href="/users/sign-up">Register</a></p>
+    </div>
+</div>

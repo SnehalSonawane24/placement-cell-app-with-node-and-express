@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="<%= assetPath('css/allocate_Interview.css') %>" >
+
+<div class="flex box">
+    <div class="schedule-form-box flex">
+        <form action="/company/schedule-interview" method="POST" class="flex">
+            <h1>Schedule Interview</h1>
+    
+            <div class="form-select-input flex">
+                <label for="studentId">Name</label>
+                <select id="studentId" name="id">
+                    <% for (const student of students) { %>
+                        <option value="<%= student._id %>"><%= student.name %></option>
+                    <% } %>
+                </select>
+            </div>
+            
+            <div class="form-input flex">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company">
+            </div>
+            
+            <div class="form-input flex">
+                <label for="date">Date: </label>
+                <input type="date" id="date" name="date">
+            </div>
+            
+            <button type="submit">Schedule Interview</button>
+        </form>
+    </div>
+</div>

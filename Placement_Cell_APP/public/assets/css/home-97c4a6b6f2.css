@@ -1,0 +1,64 @@
+.home-box{
+    /* border: 2px solid green; */
+    justify-content:unset;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.home-heading{
+    width: 75%;
+    /* border: 2px solid purple; */
+    position: relative;
+    padding: 2rem 0;
+}
+
+.home-heading h1{
+  color: rgb(19 4 63);
+}
+
+.add-student-btn{
+    background-color: #199328; 
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem;
+    color: white;
+}
+
+/* Style for the table */
+table {
+  width: 75%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+th, td {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+td{
+  padding: 1rem 0;
+}
+
+.thead{
+  background-color: rgb(38 36 73);
+  color: white;
+}
+
+.tbody:nth-child(odd){
+  background-color: rgb(182, 179, 179);
+}
+.tbody:nth-child(even){
+  background-color: rgb(249, 240, 240);
+}
+
+ /* th{
+  width: 11.6%;
+ } */
+  .delete-btn{
+    padding: .5rem;
+    margin: .5rem;
+  }
+

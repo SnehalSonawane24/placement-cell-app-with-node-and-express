@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+
+        <link rel="stylesheet" href="<%= assetPath('css/layout.css') %>" >
+        <%- style %>
+    </head>
+
+    <body>
+        <%- include('_header'); %>
+
+        <%- body %>
+
+
+        <%- script %>
+    </body>
+</html>
